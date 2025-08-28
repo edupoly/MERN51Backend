@@ -1,0 +1,19 @@
+doctype html
+html
+    head
+        title Quiz Page
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/stylesheets/style.css")
+    body
+        header
+            h1 Quiz: #{questions[0].category.toUpperCase()}
+        main
+            ol 
+                each question in questions
+                    li #{question.question.text}
+                        ol(type='A')
+                            each option in question.options
+                                li #{option}
+        footer
+            p &copy; 2024 Quiz App

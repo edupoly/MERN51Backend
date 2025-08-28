@@ -1,0 +1,20 @@
+doctype html
+html
+    head
+        title Todo Item
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        style.
+            body { font-family: Arial, sans-serif; background: #f9f9f9; padding: 2rem; }
+            .todo-card { background: #fff; border-radius: 8px; box-shadow: 0 2px 8px #ddd; padding: 2rem; max-width: 400px; margin: 10px auto; }
+            .todo-title { font-size: 2rem; margin-bottom: 1rem; }
+            .todo-status { font-size: 1.1rem; color: #888; margin-bottom: 0.5rem; }
+            .todo-timestamp { font-size: 0.95rem; color: #555; }
+            .todo-id { font-size: 0.85rem; color: #bbb; margin-top: 1rem; }
+    body
+        each todo of todos 
+            .todo-card
+                .todo-title #{todo.title}
+                .todo-status Status: 
+                    span(style="color: #e67e22") #{todo.status}
+            
