@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="socket.io.js"></script>
+</head>
+
+<body>
+    <h1>Count:<span id="cnt"></span></h1>
+    <script>
+        console.log("Hello");
+        const socket = io();
+        socket.on('updateCount', (msg) => {
+            console.log(msg);
+            document.getElementById("cnt").innerText = msg.count
+        })
+    </script>
+</body>
+
+</html>
